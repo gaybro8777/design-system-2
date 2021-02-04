@@ -1,4 +1,4 @@
-import { FieldContainer, FieldContainerPropKeys } from '../FieldContainer/FieldContainer';
+import { FormControl, FormControlPropKeys } from '../FormControl/FormControl';
 import { omit, pick } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -21,8 +21,8 @@ export class TextField extends React.PureComponent {
   }
 
   render() {
-    const containerProps = pick(this.props, FieldContainerPropKeys);
-    const inputOnlyProps = omit(this.props, FieldContainerPropKeys);
+    const containerProps = pick(this.props, FormControlPropKeys);
+    const inputOnlyProps = omit(this.props, FormControlPropKeys);
 
     // Add clearfix class
     const containerClassName = classNames(
@@ -31,7 +31,7 @@ export class TextField extends React.PureComponent {
     );
 
     return (
-      <FieldContainer
+      <FormControl
         {...containerProps}
         className={containerClassName}
         component="div"
