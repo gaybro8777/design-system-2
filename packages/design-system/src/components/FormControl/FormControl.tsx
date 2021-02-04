@@ -1,5 +1,5 @@
 import FormLabel from '../FormLabel/FormLabel';
-import InlineError from './InlineError';
+import InlineError from '../InlineError/InlineError';
 import React from 'react';
 import classNames from 'classnames';
 import { uniqueId } from 'lodash';
